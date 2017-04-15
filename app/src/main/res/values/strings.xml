@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Presentation Card</string>
+    <string name="gnstudenko">gnstudenko</string>
+    <string name="george_georgestudenko_com">george@georgestudenko.com</string>
+    <string name="georgestudenko">georgestudenko</string>
+    <string name="phoneNumber">+34 670 36 38 66</string>
+    <string name="george_studenko">George Studenko</string>
 </resources>
