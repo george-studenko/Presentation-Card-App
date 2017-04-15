@@ -1,18 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.georgestudenko.presentationcard.MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/headerImageView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="2"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/header" />
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/profilePictureImageView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/george" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/profilePictureImageView"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/george_studenko"
+
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            style="@style/infoIcon"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            app:srcCompat="@drawable/mobile" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            style="@style/infoIcon"
+            android:layout_alignLeft="@+id/imageView5"
+            android:layout_alignStart="@+id/imageView5"
+            android:layout_below="@+id/imageView5"
+            app:srcCompat="@drawable/linkedin" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            style="@style/infoIcon"
+            android:layout_alignLeft="@+id/imageView6"
+            android:layout_alignStart="@+id/imageView6"
+            android:layout_below="@+id/imageView6"
+            app:srcCompat="@drawable/github" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            style="@style/infoIcon"
+            android:layout_alignLeft="@+id/imageView8"
+            android:layout_alignStart="@+id/imageView8"
+            android:layout_below="@+id/imageView8"
+            app:srcCompat="@drawable/email" />
+
+        <TextView
+            android:id="@+id/mobilePhone"
+            style="@style/infoTextView"
+            android:layout_above="@+id/imageView6"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_toRightOf="@+id/imageView5"
+            android:text="@string/phoneNumber" />
+
+        <TextView
+            android:id="@+id/linkedIn"
+            style="@style/infoTextView"
+            android:layout_above="@+id/imageView8"
+            android:layout_toEndOf="@+id/imageView6"
+            android:layout_toRightOf="@+id/imageView6"
+            android:text="@string/georgestudenko" />
+
+        <TextView
+            android:id="@+id/github"
+            style="@style/infoTextView"
+            android:layout_above="@+id/imageView9"
+            android:layout_toEndOf="@+id/imageView8"
+            android:layout_toRightOf="@+id/imageView8"
+            android:text="@string/gnstudenko" />
+
+        <TextView
+            android:id="@+id/emailAddress"
+            style="@style/infoTextView"
+            android:layout_alignBottom="@+id/imageView9"
+            android:layout_toEndOf="@+id/imageView9"
+            android:layout_toRightOf="@+id/imageView9"
+            android:text="@string/george_georgestudenko_com" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
